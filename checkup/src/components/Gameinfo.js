@@ -85,27 +85,21 @@ const handleSubmitRemove = async (e) => {
   const loaded = () => (
    
   <div className="book-perbook" >
-      <h1>{book.title}</h1>
-       <img src={book.image}  alt="book"/>
-       <h4>Author: {book.author}</h4>
-        <p>Genre: {book.genre}</p>
-        <p>Pages: {book.pages}</p>
-        <p>{book.description}</p>
-        <p>Publication Date: {dateFormat(book.publishDate, 'mmmm, dS, yyyy')}</p>
-        <a href={book.link} style={{color:'rgb(107, 38, 38)',textDecorationLine:'underline', fontWeight: 'bold'}}>Buy </a>
-        <p>Likes: {likes}</p>
-        {userInfo && book.likes.includes(userInfo._id) ? 
-        <form onSubmit={handleSubmitUnlike}>
-        <button className="delete" type="submit"size={30} style={{color:'rgb(107, 38, 38)',marginLeft:'1rem', borderRadius: 20 + 'px'}}><BiLike style={{color:'rgb(107, 38, 38)'}}/>   Unlike </button>
+      <h1>{game.location}</h1>
+       <h4>When: {game.time}</h4>
+        <p>Players: {game.players}</p>
+        {userInfo && game.players.includes(userInfo._id) ? 
+        <form onSubmit={handleSubmitRemove}>
+        <button className="delete" type="submit"size={30} style={{color:'rgb(107, 38, 38)',marginLeft:'1rem', borderRadius: 20 + 'px'}}><BiLike style={{color:'rgb(107, 38, 38)'}}/>   Leave </button>
         </form>
         : user ?
-        <form onSubmit={handleSubmitLike}>
-         <button className="delete" type="submit"size={30} style={{color:'rgb(107, 38, 38)',marginLeft:'1rem', borderRadius: 20 + 'px'}}><BiLike style={{color:'rgb(107, 38, 38)'}}/>     Like </button>
+        <form onSubmit={handleSubmitJoin}>
+         <button className="delete" type="submit"size={30} style={{color:'rgb(107, 38, 38)',marginLeft:'1rem', borderRadius: 20 + 'px'}}><BiLike style={{color:'rgb(107, 38, 38)'}}/>     Join </button>
         </form>
         : null}
     {user && user.isAdmin ?
     <div> 
-        <Link to={`/books/${bookId}edit/`}><button className="delete" style={{color:'rgb(107, 38, 38)', marginBottom:'0.5rem', marginLeft:'0.5rem',marginRight:'0.5rem',marginTop:'0.5rem'}}>Edit book</button></Link>
+        <Link to={`/games/${gameId}edit/`}><button className="delete" style={{color:'rgb(107, 38, 38)', marginBottom:'0.5rem', marginLeft:'0.5rem',marginRight:'0.5rem',marginTop:'0.5rem'}}>Edit Game</button></Link>
         <button className="delete" onClick={removeBook} style={{color:'rgb(107, 38, 38)'}}>
 									Remove Book
 				</button>
@@ -119,7 +113,7 @@ const loading = () => {
  
 }
   return (
-    <div className="book-list">{game? loaded() : loading()}
+    <div className="game-list">{game? loaded() : loading()}
      </div>
   )
 }
