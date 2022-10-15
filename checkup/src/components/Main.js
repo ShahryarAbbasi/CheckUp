@@ -5,7 +5,7 @@ import GameForm  from "./GameForm"
 import PlayersForm from "./PlayersForm"
 import EditForm from "./EditForm";
 import EditPlayer from "./EditPlayer";
-import Home from "./Home";
+import Home from "../pages/Home";
 import AuthForm from "./AuthForm";
 
 

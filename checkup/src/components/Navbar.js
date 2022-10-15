@@ -17,7 +17,7 @@ function Navbar({handleLogout, user}) {
             <Link to="/">Home</Link>
         </li>
         <li>
-            <Link to="/books">Books</Link>
+            <Link to="/games">Games</Link>
         </li>
         { user ? (<Link onClick={handleLogout} to="/">Logout</Link>) :
         <>
