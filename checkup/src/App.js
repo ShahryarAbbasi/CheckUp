@@ -1,6 +1,8 @@
 import decode from "jwt-decode"
 import {getUserToken, setUserToken, clearUserToken} from "./utils/authToken"
 import { useState, useEffect } from 'react';
+import Navbar from './components/Navbar';
+import Main from './components/Main';
 
 
 function App() {
@@ -79,6 +81,18 @@ const logoutUser = () => {
   setCurrentUser(null);
   setIsAuthenticated(false);
 }
-
+return (
+  <div className="App">
+    <Navbar user={currentUser} handleLogout={logoutUser} getUser={getUser} isAuthenticated={isAuthenticated}/>
+    <Main 
+      getUser={getUser} 
+      user={currentUser}
+      isAuthenticated={isAuthenticated}
+      handleLogout={logoutUser}
+      handleLogin={loginUser}
+      handleSignup={registerUser}
+    />
+  </div>
+); 
 }
 export default App;

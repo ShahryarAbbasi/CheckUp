@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import dateFormat from 'dateformat'
 
 export const Games = (props) => {
-    const [games, setGamess] = useState([])
+    const [games, setGames] = useState([])
    
     const URL = "https://checkupbackend.herokuapp.com/games" 
     const getGames = async () =>{
@@ -24,14 +24,12 @@ const loaded = ()=>{
     <>
   {games?.map((game)=>{
        return (
-         <div key={book._id} className="game-card">
+         <div key={game._id} className="game-card">
           <h1>{game.title}</h1>
-          <Link to={`/games/${book._id}`}> 
-           <h4>Author: {book.author}</h4>
-           <p>Genre: {book.genre}</p>
-           <p>Pages: {book.pages}</p>
-           <p>Publication Date:  {dateFormat(book.publishDate, 'mmmm, dS, yyyy')}</p>
-           <p>Likes: {book.likes.length}</p>
+          <Link to={`/games/${game._id}`}> 
+           <h4>Game: {game.location}</h4>
+           <p>Players Needed: {game.playersNeeded}</p>
+           <p>Time: {game.time}</p>
            </Link>
         </div>
         )})
