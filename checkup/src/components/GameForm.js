@@ -63,6 +63,7 @@ function GameForm(props) {
             When: <input type="text" required name="time" placeholder="What time will this game be played?" onChange={handleChange} value={gameForm.time} />
                 </label>
                 </div>
+                <button className="delete"  style={{color:'rgb(107, 38, 38)', margin:"0 auto", width:'150px', height: '50px'}}  name="Submit" id="button" value="Add Game">Add Game</button>
             </form>
         </>
     )

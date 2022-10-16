@@ -87,7 +87,7 @@ const handleSubmitRemove = async (e) => {
   <div className="book-perbook" >
       <h1>{game.location}</h1>
        <h4>When: {game.time}</h4>
-        <p>Players: {game.players}</p>
+        <p>Player Count: {players}</p>
         {userInfo && game.players.includes(userInfo._id) ? 
         <form onSubmit={handleSubmitRemove}>
         <button className="delete" type="submit"size={30} style={{color:'rgb(107, 38, 38)',marginLeft:'1rem', borderRadius: 20 + 'px'}}><BiLike style={{color:'rgb(107, 38, 38)'}}/>   Leave </button>
@@ -101,8 +101,8 @@ const handleSubmitRemove = async (e) => {
     <div> 
         <Link to={`/games/${gameId}edit/`}><button className="delete" style={{color:'rgb(107, 38, 38)', marginBottom:'0.5rem', marginLeft:'0.5rem',marginRight:'0.5rem',marginTop:'0.5rem'}}>Edit Game</button></Link>
         <button className="delete" onClick={removeGame} style={{color:'rgb(107, 38, 38)'}}>
-									Remove Book
-				</button>
+			Remove Game
+		</button>
     </div>
     : null }
 </div>

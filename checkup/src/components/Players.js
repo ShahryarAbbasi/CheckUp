@@ -10,7 +10,7 @@ function Players({user}){
     const gameId = `${params.gameId}/`
 
     useEffect(()=> {
-        fetch(`https://mybooksy-project.herokuapp.com/players/${gameId}`)
+        fetch(`https://checkupbackend.herokuapp.com/players/${gameId}`)
         .then((res) => res.json())
         .then((json) => {
             setVariable(json)
@@ -19,7 +19,7 @@ function Players({user}){
     })
     return (
       <div className='game-players'>
-        <h4>Players:</h4>
+        <h4>Player Names:</h4>
         { user ?
          <Link to={`/players/${gameId}add/`}><button className='delete' style={{color:'rgb(107, 38, 38)', marginBottom:'2rem', marginLeft:'0.5rem',marginRight:'0.5rem',marginTop:'0.5rem'}}>Add Player</button></Link>
         : null }

@@ -46,7 +46,7 @@ function ReviewForm(props) {
                 <label>
                     <h4>Name:</h4>
                     <br></br>
-                <textarea style={{width:'250px', height: '250px', resize:'none'}}  type="text" required name="comment" placeholder="What are your thoughts on this book?" onChange={handleChange} value={playerForm.name}></textarea>
+                <input style={{width:'250px', height: '250px', resize:'none'}}  type="text" required name="name" placeholder="What are your thoughts on this book?" onChange={handleChange} value={playerForm.name}/>
                 </label>
                 <input className="delete" style={{ marginLeft: '2rem'}} type='Submit' value="Add to Queue" />
             </form>
