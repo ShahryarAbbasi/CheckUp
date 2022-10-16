@@ -16,7 +16,7 @@ function ReviewForm(props) {
         e.preventDefault()
         try {
             const newPlayer = {...playerForm}
-            const output = JSON.stringify(newReview)
+            const output = JSON.stringify(newPlayer)
             const options = {
                 method: 'POST',
                 headers: {

@@ -68,4 +68,4 @@ function GameForm(props) {
     )
 }
 
-export default BookForm
+export default GameForm
