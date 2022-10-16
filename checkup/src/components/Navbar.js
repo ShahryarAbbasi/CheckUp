@@ -11,7 +11,7 @@ function Navbar({handleLogout, user}) {
         <Link to="/"></Link>
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
         { user ?
-        <li size={60} style={{color:'#fff'}}>Welcome!  {user.username}</li>
+        <li>Welcome! {user.username}</li>
         : null} 
         <li>
             <Link to="/">Home</Link>
@@ -36,7 +36,7 @@ function Navbar({handleLogout, user}) {
         : null } 
         </ul>
         <div className='hamburger' onClick={handleClick}> 
-          {click ? (<FaTimes size={20} style={{color:'#fff'}}/>) : (<FaBars size={20} style={{color:'#fff'}} />)} 
+          {click ? (<FaTimes />) : (<FaBars />)} 
         </div>
     </header>
   )
