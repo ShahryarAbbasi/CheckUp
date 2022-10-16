@@ -1,6 +1,6 @@
 import { Routes, Route, Outlet } from "react-router-dom";
 import { Games } from "../pages/Games";
-import {Show} from "../pages/Show";
+import Show from "../pages/Show";
 import GameForm  from "./GameForm"
 import PlayersForm from "./PlayersForm"
 import EditForm from "./EditForm";

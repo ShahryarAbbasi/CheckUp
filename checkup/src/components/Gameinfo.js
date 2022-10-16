@@ -12,12 +12,12 @@ export default function Gameinfo({user}) {
   const navigate = useNavigate()
   const URL = `https://checkupbackend.herokuapp.com/games/${gameId}`
 
-  const getBook = async ()=>{
+  const getGame = async ()=>{
     try {
       const response = await fetch(URL)
       const result = await response.json()
-      setBook(result)
-      setLikes(result.likes.length)
+      setGame(result)
+      setPlayers(result.players.length)
     }catch(err){
       console.log(err)
     }
@@ -27,8 +27,8 @@ const removeGame = async () => {
   try {
       const options = { method: 'DELETE' }
       const response = await fetch(URL, options)
-      const deletedBook = await response.json()
-      console.log(deletedBook)
+      const deletedGame = await response.json()
+      console.log(deletedGame)
       navigate('/games')
   } catch (err) {
       console.log(err)
@@ -54,7 +54,7 @@ const handleSubmitJoin = async (e) => {
   const response = await fetch(URL, options)
   const responseData = await response.json()
   console.log(responseData)
-  setLikes(likes + 1)
+  setPlayers(players + 1)
   } catch(error) {
     console.log(error)
   }
@@ -62,9 +62,9 @@ const handleSubmitJoin = async (e) => {
 
 const handleSubmitRemove = async (e) => {
   e.preventDefault()
-  const index = book.likes.indexOf(userInfo._id)
+  const index = game.players.indexOf(userInfo._id)
   game.players.splice(index, 1)
-  const output = JSON.stringify(book)
+  const output = JSON.stringify(game)
   try {
     const options = {
       method: "PUT",
@@ -76,7 +76,7 @@ const handleSubmitRemove = async (e) => {
   const response = await fetch(URL, options)
   const responseData = await response.json()
   console.log(responseData)
-  setPlayers(likes - 1)
+  setPlayers(players - 1)
   } catch(error) {
     console.log(error)
   }
@@ -100,7 +100,7 @@ const handleSubmitRemove = async (e) => {
     {user && user.isAdmin ?
     <div> 
         <Link to={`/games/${gameId}edit/`}><button className="delete" style={{color:'rgb(107, 38, 38)', marginBottom:'0.5rem', marginLeft:'0.5rem',marginRight:'0.5rem',marginTop:'0.5rem'}}>Edit Game</button></Link>
-        <button className="delete" onClick={removeBook} style={{color:'rgb(107, 38, 38)'}}>
+        <button className="delete" onClick={removeGame} style={{color:'rgb(107, 38, 38)'}}>
 									Remove Book
 				</button>
     </div>
