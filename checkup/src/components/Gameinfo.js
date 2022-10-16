@@ -85,7 +85,7 @@ const handleSubmitRemove = async (e) => {
   const loaded = () => (
    
   <div className="book-perbook" >
-      <h1>{game.location}</h1>
+      <h1>Where: {game.location}</h1>
        <h4>When: {game.time}</h4>
         <p>Player Count: {players}</p>
         {userInfo && game.players.includes(userInfo._id) ? 

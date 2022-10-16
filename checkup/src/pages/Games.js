@@ -27,9 +27,8 @@ const loaded = ()=>{
          <div key={game._id} className="game-card">
           <h1>{game.title}</h1>
           <Link to={`/games/${game._id}`}> 
-           <h4>Game: {game.location}</h4>
-           <p>Players Needed: {game.playersNeeded}</p>
-           <p>Time: {game.time}</p>
+           <h4>Where: {game.location}</h4>
+           <p>When: {game.time}</p>
            </Link>
         </div>
         )})

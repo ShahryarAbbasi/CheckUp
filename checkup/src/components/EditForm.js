@@ -8,8 +8,9 @@ const BASE_URL =  "https://checkupbackend.herokuapp.com/";
     const navigate = useNavigate()
     const [editForm, setEditForm] = useState(null);
     const params = useParams()
-    const gameId = params.gameId
+    const gameId = params.gamesId
     const URL = BASE_URL + `games/${gameId}`  
+
 
     const getGame = async () => {
         const response = await fetch(URL)
@@ -61,6 +62,7 @@ const BASE_URL =  "https://checkupbackend.herokuapp.com/";
             <label>
             When: <input type="text" required name="time" placeholder="http://..." onChange={handleChange} value={editForm.time} />
             </label>
+            <input className="delete" style={{width: '200px', height: '50px', margin: "0 auto" }}  type="Submit" value="Submit Changes" />
             </form>
            </> : null}
         </>
