@@ -2,6 +2,7 @@ import decode from "jwt-decode"
 import {getUserToken, setUserToken, clearUserToken} from "./utils/authToken"
 import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import Main from './components/Main';
 
 
@@ -92,6 +93,7 @@ return (
       handleLogin={loginUser}
       handleSignup={registerUser}
     />
+    <Footer />
   </div>
 ); 
 }
