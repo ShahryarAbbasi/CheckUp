@@ -48,7 +48,7 @@ function ReviewForm(props) {
                     <br></br>
                 <input style={{width:'250px', height: '25px', resize:'none'}}  type="text" required name="name" placeholder="Enter your name" onChange={handleChange} value={playerForm.name}/>
                 </label>
-                <input className="submit" style={{ marginLeft: '2rem'}} type='Submit' value="Add to Queue" />
+                <input className="submit" type='Submit' value="Add to Queue" />
             </form>
         </div>
     )
