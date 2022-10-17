@@ -46,7 +46,7 @@ function AuthForm({signal, ...userLogin}) {
                 />
             </label>
             <br></br>
-            <input className="delete" style={{ marginLeft: '8rem', marginTop: '3rem', borderRadius: 10 + 'px'}} type="submit" value={login ? "Login" : "Signup"}/>
+            <input className="submit" type="submit" value={login ? "Login" : "Signup"}/>
         </form>
     )
 }
