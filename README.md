@@ -7,7 +7,7 @@ CheckUp is an app targeted towards those who love pick up basketball. There has 
 MERN stack, MIRO, Heroku
 
 ## Planning
-[link to Miro]((https://miro.com/app/board/uXjVPOi07fE=/?share_link_id=607843975235)
+[link to Miro](https://miro.com/app/board/uXjVPOi07fE=/?share_link_id=607843975235)
 [Backend](https://github.com/ShahryarAbbasi/CheckUpBackend)
 
 ## Pictures of App
