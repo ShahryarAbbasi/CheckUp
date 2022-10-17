@@ -55,14 +55,15 @@ function GameForm(props) {
             <form className="form" onSubmit={handleSubmit}>
             <h1>Add Game!</h1>
             <div class="gameForm">
-             <label>
-            Where: <input style={{width:'250px', height: '25px', resize:'none'}} type="text" required name="location" placeholder="Where is this game going to be played?" onChange={handleChange} value={gameForm.location} />
-                </label>
-                <br></br>
                 <label>
-            When: <input style={{width:'250px', height: '25px', resize:'none'}} type="text" required name="time" placeholder="What time will this game be played?" onChange={handleChange} value={gameForm.time} />
+                    Where: 
+                    <input style={{width:'250px', height: '25px'}} type="text" required name="location" placeholder="Where is this game going to be played?" onChange={handleChange} value={gameForm.location} />
                 </label>
-                </div>
+                    <br></br>
+                <label>
+                    When: <input style={{width:'250px', height: '25px'}} type="text" required name="time" placeholder="What time will this game be played?" onChange={handleChange} value={gameForm.time} />
+                </label>
+            </div>
                 <button className="submit" name="Submit" id="button" value="Add Game">Add Game</button>
             </form>
         </>

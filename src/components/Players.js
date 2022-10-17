@@ -32,7 +32,7 @@ function Players({user}){
                 const options = {method: 'DELETE'}
                 const response = await fetch(`https://checkupbackend.herokuapp.com/players/${player._id}`, options)
                 const deletedPlayer = await response.json()
-              }}>Remove Player</button>
+              }}>Check In</button>
               </>
               : null }
               </p>
