@@ -1,7 +1,7 @@
 # [CheckUp](https://checkupreact.herokuapp.com/)
 
 ## Overview
-CheckUp is an app targeted towards those who love pick up basketball. There has always been a chaotic element to pick up basketball and CheckUp is here to minimize that chaos. User's are able to start games, pick a location, time, and add players to the game's waitlist. This will organize the runs in an efficient way, and allowing better use of time at the courts.
+CheckUp is an app targeted towards those who love pick up basketball. There has always been a chaotic element to pick up basketball and CheckUp is here to minimize that chaos. Users are able to start games, pick a location, time, and add players to the game's waitlist. This will organize the runs in an efficient way, and allowing better use of time at the courts.
 
 ## Technologies Used
 * MongoDB
