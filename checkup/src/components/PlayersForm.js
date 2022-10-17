@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate, useParams} from "react-router-dom";
 const BASE_URL = "https://checkupbackend.herokuapp.com/"
 
-function ReviewForm(props) {
+function PlayersForm(props) {
     const params = useParams();
     const gameId = params.gameId;
     const navigate = useNavigate();
@@ -54,4 +54,4 @@ function ReviewForm(props) {
     )
 }
 
-export default ReviewForm;
+export default PlayersForm;
