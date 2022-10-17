@@ -18,6 +18,8 @@ MERN stack, MIRO, Heroku
 ## Stretch Goals
 * Add user profiles with user info such as profile pic, location, games etc.
 * Add ratings system to rate the game the player just played
+* Proper user auth
+* Expand models to have real locations from an api
 
 ## Challenging Parts
 Debugging. This was the first project that I wanted to debug everything on my own and research. I had many hours where I would go down a rabbit hole and felt like I still did not fix the problem. 
