@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import { useParams, useNavigate} from "react-router-dom"
 import {Link} from 'react-router-dom' 
-import { BiLike } from "react-icons/bi"
+
 
 export default function Gameinfo({user}) {
   const [players, setPlayers] = useState(null);
@@ -84,17 +84,17 @@ const handleSubmitRemove = async (e) => {
 
   const loaded = () => (
    
-  <div className="book-perbook" >
+  <div className="gameCard" >
       <h1>Where: {game.location}</h1>
        <h4>When: {game.time}</h4>
         <p>Player Count: {players}</p>
         {userInfo && game.players.includes(userInfo._id) ? 
         <form onSubmit={handleSubmitRemove}>
-        <button className="delete" type="submit"size={30} style={{color:'rgb(107, 38, 38)',marginLeft:'1rem', borderRadius: 20 + 'px'}}><BiLike style={{color:'rgb(107, 38, 38)'}}/>   Leave </button>
+        <button className="delete" type="submit"size={30} style={{color:'rgb(107, 38, 38)',marginLeft:'1rem', borderRadius: 20 + 'px'}}>Leave</button>
         </form>
         : user ?
         <form onSubmit={handleSubmitJoin}>
-         <button className="delete" type="submit"size={30} style={{color:'rgb(107, 38, 38)',marginLeft:'1rem', borderRadius: 20 + 'px'}}><BiLike style={{color:'rgb(107, 38, 38)'}}/>     Join </button>
+         <button className="delete" type="submit"size={30} style={{color:'rgb(107, 38, 38)',marginLeft:'1rem', borderRadius: 20 + 'px'}}>Join</button>
         </form>
         : null}
     {user && user.isAdmin ?

@@ -11,7 +11,7 @@ function Navbar({handleLogout, user}) {
         <Link to="/"></Link>
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
         { user ?
-        <li>Welcome! {user.username}</li>
+        <li>CheckUp {user.username}!</li>
         : null} 
         <li>
             <Link to="/">Home</Link>
@@ -19,7 +19,12 @@ function Navbar({handleLogout, user}) {
         <li>
             <Link to="/games">Games</Link>
         </li>
-        { user ? (<Link onClick={handleLogout} to="/">Logout</Link>) :
+        { user && user.isAdmin ? 
+        <li>
+            <Link to="/games/add">Start A New Game</Link>
+        </li>
+        : null } 
+        { user ? (<li><Link onClick={handleLogout} to="/">Logout</Link></li>) :
         <>
           <li>
             <Link to="/login">Login</Link>
@@ -29,11 +34,6 @@ function Navbar({handleLogout, user}) {
           </li>
         </>
         }
-        { user && user.isAdmin ? 
-        <li>
-            <Link to="/games/add">Start A New Game</Link>
-        </li>
-        : null } 
         </ul>
         <div className='hamburger' onClick={handleClick}> 
           {click ? (<FaTimes />) : (<FaBars />)} 

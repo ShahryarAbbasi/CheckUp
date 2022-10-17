@@ -56,13 +56,14 @@ const BASE_URL =  "https://checkupbackend.herokuapp.com/";
            <form className="form" onSubmit={handleSubmit}>
            <h1>Edit Game</h1>
             <label>
-            Where: <input type="text" required name="location" placeholder="Enter book name" onChange={handleChange} value={editForm.location} />
+            Where: <input style={{width:'250px', height: '25px', resize:'none'}} type="text" required name="location" placeholder="Enter book name" onChange={handleChange} value={editForm.location} />
             </label>
             <br></br>
             <label>
-            When: <input type="text" required name="time" placeholder="http://..." onChange={handleChange} value={editForm.time} />
+            When: <input style={{width:'250px', height: '25px', resize:'none'}} type="text" required name="time" placeholder="http://..." onChange={handleChange} value={editForm.time} />
             </label>
-            <input className="delete" style={{width: '200px', height: '50px', margin: "0 auto" }}  type="Submit" value="Submit Changes" />
+            <br></br>
+            <input className="submit" type="Submit" value="Submit Changes" />
             </form>
            </> : null}
         </>

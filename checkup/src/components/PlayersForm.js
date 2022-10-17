@@ -46,9 +46,9 @@ function ReviewForm(props) {
                 <label>
                     <h4>Name:</h4>
                     <br></br>
-                <input style={{width:'250px', height: '250px', resize:'none'}}  type="text" required name="name" placeholder="What are your thoughts on this book?" onChange={handleChange} value={playerForm.name}/>
+                <input style={{width:'250px', height: '25px', resize:'none'}}  type="text" required name="name" placeholder="Enter your name" onChange={handleChange} value={playerForm.name}/>
                 </label>
-                <input className="delete" style={{ marginLeft: '2rem'}} type='Submit' value="Add to Queue" />
+                <input className="submit" style={{ marginLeft: '2rem'}} type='Submit' value="Add to Queue" />
             </form>
         </div>
     )

@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import {Link} from 'react-router-dom' 
-import dateFormat from 'dateformat'
 
 export const Games = (props) => {
     const [games, setGames] = useState([])
@@ -22,15 +21,18 @@ export const Games = (props) => {
 const loaded = ()=>{
   return (
     <>
+    <h1>Current Games</h1>
   {games?.map((game)=>{
        return (
-         <div key={game._id} className="game-card">
-          <h1>{game.title}</h1>
-          <Link to={`/games/${game._id}`}> 
-           <h4>Where: {game.location}</h4>
-           <p>When: {game.time}</p>
-           </Link>
-        </div>
+            <div key={game._id} className="gameCard">
+                <Link to={`/games/${game._id}`}> 
+                    <h3>Where: {game.location}</h3>
+                    <h4>When: {game.time}</h4>
+                    <div className="ball">
+                        <h1>🏀</h1>
+                    </div>
+                </Link>          
+            </div>
         )})
         } </> )}
 const loading = () => (
