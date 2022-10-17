@@ -101,7 +101,7 @@ const handleSubmitRemove = async (e) => {
     <div> 
         <Link to={`/games/${gameId}edit/`}><button className="delete">Edit Game</button></Link>
         <button className="submit" onClick={removeGame} >
-			Remove Game
+			Game Over
 		</button>
     </div>
     : null }
