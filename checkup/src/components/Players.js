@@ -19,7 +19,7 @@ function Players({user}){
     return (
       <div className='gamePlayers'>
         { user ?
-         <Link to={`/players/${gameId}add/`}><button className='delete' style={{color:'rgb(107, 38, 38)', marginBottom:'2rem', marginLeft:'0.5rem',marginRight:'0.5rem',marginTop:'0.5rem'}}>Add Player</button></Link>
+         <Link to={`/players/${gameId}add/`}><button className='submit'>Add Player</button></Link>
         : null }
         <h4>Game Waitlist:</h4>
         {variable.map((player, idx) => { 
@@ -28,7 +28,7 @@ function Players({user}){
               <p>{player.name}
               {user ?
               <>
-              <button className="delete" style={{color:'rgb(107, 38, 38)', marginBottom:'3rem', marginLeft:'0.5rem',marginRight:'0.5rem',marginTop:'0.5rem'}} onClick={async ()=> {
+              <button className="submit" onClick={async ()=> {
                 const options = {method: 'DELETE'}
                 const response = await fetch(`https://checkupbackend.herokuapp.com/players/${player._id}`, options)
                 const deletedPlayer = await response.json()

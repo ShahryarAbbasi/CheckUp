@@ -35,9 +35,6 @@ function Navbar({handleLogout, user}) {
         </>
         }
         </ul>
-        <div className='hamburger' onClick={handleClick}> 
-          {click ? (<FaTimes />) : (<FaBars />)} 
-        </div>
     </header>
   )
 }

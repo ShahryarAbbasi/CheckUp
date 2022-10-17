@@ -90,17 +90,17 @@ const handleSubmitRemove = async (e) => {
         <p>Player Count: {players}</p>
         {userInfo && game.players.includes(userInfo._id) ? 
         <form onSubmit={handleSubmitRemove}>
-        <button className="delete" type="submit"size={30} style={{color:'rgb(107, 38, 38)',marginLeft:'1rem', borderRadius: 20 + 'px'}}>Leave</button>
+        <button className="submit" type="submit"size={30}>Leave</button>
         </form>
         : user ?
         <form onSubmit={handleSubmitJoin}>
-         <button className="delete" type="submit"size={30} style={{color:'rgb(107, 38, 38)',marginLeft:'1rem', borderRadius: 20 + 'px'}}>Join</button>
+         <button className="submit" type="submit"size={30}>Join</button>
         </form>
         : null}
     {user && user.isAdmin ?
     <div> 
-        <Link to={`/games/${gameId}edit/`}><button className="delete" style={{color:'rgb(107, 38, 38)', marginBottom:'0.5rem', marginLeft:'0.5rem',marginRight:'0.5rem',marginTop:'0.5rem'}}>Edit Game</button></Link>
-        <button className="delete" onClick={removeGame} style={{color:'rgb(107, 38, 38)'}}>
+        <Link to={`/games/${gameId}edit/`}><button className="delete">Edit Game</button></Link>
+        <button className="submit" onClick={removeGame} >
 			Remove Game
 		</button>
     </div>
