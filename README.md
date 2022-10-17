@@ -16,7 +16,7 @@ MERN stack, MIRO, Heroku
 <img width="1192" alt="Screen Shot 2022-10-17 at 9 25 14 AM" src="https://user-images.githubusercontent.com/85513770/196189090-1db75d1b-fda4-4d6a-9d56-cad5dbe31985.png">
 
 ## Stretch Goals
-* Add uer profiles
+* Add user profiles with user info such as profile pic, location, games etc.
 * Add ratings system to rate the game the player just played
 
 ## Challenging Parts
